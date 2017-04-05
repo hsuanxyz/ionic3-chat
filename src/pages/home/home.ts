@@ -11,6 +11,12 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
+
   }
+
+  fun(){
+    return [1,2,'222',4]
+  }
+
 
 }

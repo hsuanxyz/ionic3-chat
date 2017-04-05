@@ -17,54 +17,18 @@
 
   <div class="message-wrap">
 
-    <div class="message left">
-      <img class="user-img" src="./assets/to-user.jpg" alt="">
+    <div *ngFor="let msg of msgList"
+         class="message left"
+         [class.left]=" msg.userId === toUserId "
+         [class.right]=" msg.userId === userId ">
+      <img class="user-img" [src]="msg.userImgUrl" alt="" src="">
       <div class="msg-detail">
         <div class="msg-info">
-          <p>Hancock&nbsp;&nbsp;&nbsp;3分钟前</p>
+          <p>{{msg.userName}}&nbsp;&nbsp;&nbsp;{{msg.time | date:'yyyy-MM-dd hh:mm'}}</p>
         </div>
         <div class="msg-content">
           <span class="triangle"></span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem beatae, dolore eaque facere facilis illo inventore ipsam iusto laudantium, magni odit officiis praesentium, qui quidem suscipit veniam? Excepturi, quas.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="message right">
-      <img class="user-img" src="./assets/user.jpg" alt="">
-      <div class="msg-detail">
-        <div class="msg-info">
-          <p>Hancock&nbsp;&nbsp;&nbsp;3分钟前</p>
-        </div>
-        <div class="msg-content">
-          <span class="triangle"></span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, eos.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="message right">
-      <img class="user-img" src="./assets/user.jpg" alt="">
-      <div class="msg-detail">
-        <div class="msg-info">
-          <p>Hancock&nbsp;&nbsp;&nbsp;3分钟前</p>
-        </div>
-        <div class="msg-content">
-          <span class="triangle"></span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi autem commodi debitis deserunt ea eaque eligendi et impedit iste iusto magnam maxime odio, officia pariatur placeat, quam, reiciendis saepe suscipit voluptatem?</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="message left">
-      <img class="user-img" src="./assets/to-user.jpg" alt="">
-      <div class="msg-detail">
-        <div class="msg-info">
-          <p>Hancock&nbsp;&nbsp;&nbsp;3分钟前</p>
-        </div>
-        <div class="msg-content">
-          <span class="triangle"></span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem beatae, dolore eaque facere facilis illo inventore ipsam iusto laudantium, magni odit officiis praesentium, qui quidem suscipit veniam? Excepturi, quas.</p>
+          <p class="line-breaker ">{{msg.message}}</p>
         </div>
       </div>
     </div>
@@ -78,10 +42,11 @@
     <ion-row>
 
       <ion-col col-10>
-        <ion-textarea placeholder="Text Input"></ion-textarea>
+        <ion-textarea placeholder="Text Input" [(ngModel)]="editorMsg"></ion-textarea>
       </ion-col>
       <ion-col col-2>
-        <button ion-button clear icon-only item-right >
+        <button ion-button clear icon-only item-right
+                (click)="sendMsg()" >
           <ion-icon  name="ios-send" ios="ios-send" md="md-send"></ion-icon>
         </button>
       </ion-col>

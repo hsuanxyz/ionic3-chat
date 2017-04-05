@@ -11,6 +11,10 @@ page-chat {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
   }
 
+  .line-breaker {
+    white-space: pre-line;
+  }
+
   .input-wrap{
     padding: 0 5px;
     ion-col.col{

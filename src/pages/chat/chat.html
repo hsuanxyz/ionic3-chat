@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>chat</ion-title>
+    <ion-title>{{toUserName}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -18,13 +18,15 @@
   <div class="message-wrap">
 
     <div *ngFor="let msg of msgList"
-         class="message left"
+         class="message"
          [class.left]=" msg.userId === toUserId "
          [class.right]=" msg.userId === userId ">
       <img class="user-img" [src]="msg.userImgUrl" alt="" src="">
+      <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
       <div class="msg-detail">
         <div class="msg-info">
-          <p>{{msg.userName}}&nbsp;&nbsp;&nbsp;{{msg.time | date:'yyyy-MM-dd hh:mm'}}</p>
+          <p>
+            {{msg.userName}}&nbsp;&nbsp;&nbsp;{{msg.time | relativeTime}}</p>
         </div>
         <div class="msg-content">
           <span class="triangle"></span>

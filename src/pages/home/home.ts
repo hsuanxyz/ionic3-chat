@@ -9,13 +9,13 @@ import {NavController, IonicPage} from 'ionic-angular';
 })
 export class HomePage {
 
+  toUser:Object;
+
   constructor(public navCtrl: NavController) {
-
-
-  }
-
-  fun(){
-    return [1,2,'222',4]
+    this.toUser = {
+      toUserId:'210000198410281948',
+      toUserName:'Hancock'
+    }
   }
 
 

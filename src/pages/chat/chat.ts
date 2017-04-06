@@ -1,15 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
+import {Component, ViewChild, ChangeDetectorRef} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ChatService, ChatMessage} from "../../providers/chat-service";
-
 import { Events, Content } from 'ionic-angular';
 
-/**
- * Generated class for the Chat page.
- *
- * See http://ionicframework.com/docs/v2/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { ChatService, ChatMessage} from "../../providers/chat-service";
+
 @IonicPage()
 @Component({
   selector: 'page-chat',
@@ -18,89 +12,127 @@ import { Events, Content } from 'ionic-angular';
 export class Chat {
 
   @ViewChild(Content) content: Content;
-
   msgList: ChatMessage[] = [];
-  userId: string = '140000198202211138';
-  userName: string = 'Luff';
-  userImgUrl: string = './assets/user.jpg';
-  toUserId: string = '210000198410281948';
+  userId: string;
+  userName: string;
+  userImgUrl: string;
+  toUserId: string ;
+  toUserName: string ;
   editorMsg: string = '';
   constructor(
       public navCtrl: NavController,
       public navParams: NavParams,
       public chatService: ChatService,
-      public events: Events
+      public events: Events,
+      public ref: ChangeDetectorRef,
   ) {
+
+    // Get the navParams toUserId parameter
+    this.toUserId = navParams.get('toUserId');
+    this.toUserName = navParams.get('toUserName');
+    // Get mock user information
+    this.chatService.getUserInfo()
+        .then( (res) => {
+          this.userId = res.userId;
+          this.userName = res.userName;
+          this.userImgUrl = res.userImgUrl;
+        })
   }
 
-  ionViewDidLoad() {
-    this.content.enableScrollListener();
-    this.events.subscribe('chat:received',(msg,time) => {
-      this.pushNewMsg(msg)
-    })
+    ionViewDidLoad() {
+
+    }
+
+    ionViewWillLeave(){
+     // unsubscribe
+     this.events.unsubscribe('chat:received')
   }
 
-  ionViewWillEnter(){
-    this.getMsg()
-        .then( () => {
-          this.scrollToBottom()
-        });
-  }
+    ionViewDidEnter(){
 
-  getMsg(){
+        //get message list
+        this.getMsg()
+            .then( () => {
+              this.scrollToBottom()
+            });
+
+        // Subscribe to received  new message events
+        this.events.subscribe('chat:received',(msg,time) => {
+          this.pushNewMsg(msg);
+        })
+    }
+
+    /**
+    * @name getMsg
+    * @returns {Promise<ChatMessage[]>}
+    */
+    getMsg(){
+    // Get mock message list
     return this.chatService
         .getMsgList()
         .then( res => {
           this.msgList = res;
-          console.log(this.msgList)
         })
         .catch(err => {
           console.log(err)
         })
-  }
-
-  sendMsg(){
-    const id = Date.now().toString();
-    let newMsg: ChatMessage = {
-      messageId: Date.now().toString(),
-      userId:this.userId,
-      userName:this.userName,
-      userImgUrl:this.userImgUrl,
-      toUserId:this.toUserId,
-      time:Date.now(),
-      message:this.editorMsg,
-      status:'pending'
-    };
-    this.pushNewMsg(newMsg);
-    this.editorMsg = '';
-    this.chatService.sendMsg(newMsg)
-        .then( () => {
-          let index = this.getMsgIndexById(id);
-          if(index !== -1){
-            this.msgList[index].status = 'success';
-          }
-        })
-  }
-
-  getMsgIndexById(id:string){
-    return this.msgList.findIndex( e => e.messageId === id)
-  }
-
-  pushNewMsg(msg: ChatMessage) :string{
-    if(msg.userId === this.userId &&  msg.toUserId === this.toUserId){
-      this.msgList.push(msg);
-    }else if (msg.toUserId === this.userId && msg.userId === this.toUserId){
-      this.msgList.push(msg);
     }
-    this.scrollToBottom();
-    return msg.messageId
+
+    /**
+    * @name sendMsg
+    */
+    sendMsg(){
+
+        if(!this.editorMsg.trim()) return;
+
+        // Mock message
+        const id = Date.now().toString();
+        let newMsg: ChatMessage = {
+          messageId: Date.now().toString(),
+          userId:this.userId,
+          userName:this.userName,
+          userImgUrl:this.userImgUrl,
+          toUserId:this.toUserId,
+          time:Date.now(),
+          message:this.editorMsg,
+          status:'pending'
+        };
+
+        this.pushNewMsg(newMsg);
+        this.editorMsg = '';
+
+        this.chatService.sendMsg(newMsg)
+            .then( () => {
+              let index = this.getMsgIndexById(id);
+              if(index !== -1){
+                this.msgList[index].status = 'success';
+              }
+            })
+    }
+
+    /**
+     * @name pushNewMsg
+     * @param msg
+     */
+    pushNewMsg(msg: ChatMessage){
+         // Verify user relationships
+        if(msg.userId === this.userId &&  msg.toUserId === this.toUserId){
+          this.msgList.push(msg);
+        }else if (msg.toUserId === this.userId && msg.userId === this.toUserId){
+          this.msgList.push(msg);
+        }
+        this.scrollToBottom();
   }
 
-  scrollToBottom() {
-    setTimeout(() => {
-      if(this.content.scrollToBottom){
-        this.content.scrollToBottom();
-      }
-    },100)
-  }
+    getMsgIndexById(id:string){
+        return this.msgList.findIndex( e => e.messageId === id)
+    }
+
+    scrollToBottom() {
+        setTimeout(() => {
+          if(this.content.scrollToBottom){
+              this.content.scrollToBottom();
+          }
+        },0)
+    }
 }

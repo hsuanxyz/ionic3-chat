@@ -15,13 +15,32 @@ export class ChatMessage {
     status: string;
 }
 
+export class UserInfo {
+    userId: string;
+    userName: string;
+    userImgUrl: string;
+}
+
 @Injectable()
 export class ChatService {
 
   constructor(public http: Http,public events: Events) {
-    console.log('Hello ChatService Provider');
   }
 
+  mockNewMsg(msg){
+      setTimeout(() => {
+          this.events.publish('chat:received', {
+              messageId: Date.now().toString(),
+              userId:'210000198410281948',
+              userName:'Hancock',
+              userImgUrl:'./assets/to-user.jpg',
+              toUserId:'140000198202211138',
+              time:Date.now(),
+              message:msg.message,
+              status:'success'
+          }, Date.now());
+      },Math.random()*1800)
+  }
 
   getMsgList(): Promise<ChatMessage[]> {
       const msgListUrl = './assets/mock/msg-list.json';
@@ -35,21 +54,21 @@ export class ChatService {
   sendMsg(msg:ChatMessage){
       return new Promise( (resolve,reject) => {
           setTimeout( () =>{
-              resolve()
+              resolve(msg)
           },Math.random()*1000)
-      }).then( () => {
-          setTimeout(() => {
-              this.events.publish('chat:received', {
-                  messageId: Date.now().toString(),
-                  userId:'210000198410281948',
-                  userName:'Hancock',
-                  userImgUrl:'./assets/to-user.jpg',
-                  toUserId:'140000198202211138',
-                  time:Date.now(),
-                  message:msg.message,
-                  status:'success'
-              }, Date.now());
-          },Math.random()*1800)
+      }).then(() => {
+          this.mockNewMsg(msg)
+      })
+  }
+
+  getUserInfo(): Promise<UserInfo> {
+      let userInfo:UserInfo = {
+          userId:'140000198202211138',
+          userName:'Luff',
+          userImgUrl:'./assets/user.jpg'
+      };
+      return new Promise((resolve,reject) => {
+          resolve(userInfo)
       })
   }
 

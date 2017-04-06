@@ -1,6 +1,6 @@
 import {Component, ViewChild, ChangeDetectorRef} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Events, Content } from 'ionic-angular';
+import { Events, Content, TextInput } from 'ionic-angular';
 
 import { ChatService, ChatMessage} from "../../providers/chat-service";
 
@@ -12,6 +12,7 @@ import { ChatService, ChatMessage} from "../../providers/chat-service";
 export class Chat {
 
   @ViewChild(Content) content: Content;
+  @ViewChild('chat_input') messageInput: TextInput;
   msgList: ChatMessage[] = [];
   userId: string;
   userName: string;
@@ -53,7 +54,7 @@ export class Chat {
         //get message list
         this.getMsg()
             .then( () => {
-              this.scrollToBottom()
+                this.scrollToBottom()
             });
 
         // Subscribe to received  new message events
@@ -100,6 +101,7 @@ export class Chat {
 
         this.pushNewMsg(newMsg);
         this.editorMsg = '';
+        this.messageInput.setFocus();
 
         this.chatService.sendMsg(newMsg)
             .then( () => {
@@ -133,6 +135,6 @@ export class Chat {
           if(this.content.scrollToBottom){
               this.content.scrollToBottom();
           }
-        },0)
+        },400)
     }
 }

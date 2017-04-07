@@ -60,7 +60,7 @@
 
  ## Environment
  ```
- ordova CLI: 6.4.0
+ cordova CLI: 6.4.0
  Ionic Framework Version: 3.0.0
  Ionic CLI Version: 2.2.1
  Ionic App Lib Version: 2.2.0

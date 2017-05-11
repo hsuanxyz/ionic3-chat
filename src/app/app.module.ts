@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -18,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     IonicModule.forRoot(MyApp,{
       tabsHideOnSubPages:true,
       tabsLayout:'icon-left'
-    })
+    }),
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [

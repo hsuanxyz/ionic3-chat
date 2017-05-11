@@ -20,6 +20,7 @@ export class Chat {
   toUserId: string ;
   toUserName: string ;
   editorMsg: string = '';
+  _isOpenEmojiPicker = false;
   constructor(
       public navCtrl: NavController,
       public navParams: NavParams,
@@ -61,6 +62,11 @@ export class Chat {
         this.events.subscribe('chat:received',(msg,time) => {
           this.pushNewMsg(msg);
         })
+    }
+
+
+    switchEmojiPicker(){
+        this._isOpenEmojiPicker = !this._isOpenEmojiPicker
     }
 
     /**

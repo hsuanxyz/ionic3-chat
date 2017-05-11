@@ -39,11 +39,17 @@
 
 </ion-content>
 
-<ion-footer no-border>
+<ion-footer no-border [style.height]="_isOpenEmojiPicker ? '255px' : '55px'">
   <ion-grid class="input-wrap">
     <ion-row>
 
-      <ion-col col-10>
+      <ion-col col-2>
+        <button ion-button clear icon-only item-right
+                (click)="switchEmojiPicker()" >
+          <ion-icon  name="md-happy"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
         <ion-textarea
                 #chat_input
                 placeholder="Text Input"
@@ -60,5 +66,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <emoji-picker></emoji-picker>
+  <emoji-picker [hidden]="!_isOpenEmojiPicker" [(ngModel)]="editorMsg"></emoji-picker>
 </ion-footer>

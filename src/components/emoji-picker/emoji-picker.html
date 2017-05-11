@@ -4,7 +4,9 @@
     <ion-slides pager>
 
       <ion-slide *ngFor="let items of emojiArr">
-        <span class="emoji-item" *ngFor="let item of items">
+        <span class="emoji-item"
+              (click)="setValue(item)"
+              *ngFor="let item of items">
           {{item}}
         </span>
       </ion-slide>

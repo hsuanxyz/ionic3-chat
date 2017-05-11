@@ -55,7 +55,7 @@
                 placeholder="Text Input"
                 [(ngModel)]="editorMsg"
                 (keyup.enter)="sendMsg()"
-                (focus)="scrollToBottom()"
+                (focus)="_focus()"
         ></ion-textarea>
       </ion-col>
       <ion-col col-2>

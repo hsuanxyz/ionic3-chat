@@ -65,9 +65,17 @@ export class Chat {
         })
     }
 
+    _focus(){
+        this._isOpenEmojiPicker = false;
+        this.content.resize();
+        this.scrollToBottom()
+    }
 
     switchEmojiPicker(){
         this._isOpenEmojiPicker = !this._isOpenEmojiPicker;
+        if(!this._isOpenEmojiPicker){
+            this.messageInput.setFocus();
+        }
         this.content.resize();
         this.scrollToBottom();
     }
@@ -110,7 +118,10 @@ export class Chat {
 
         this.pushNewMsg(newMsg);
         this.editorMsg = '';
-        this.messageInput.setFocus();
+
+        if(!this._isOpenEmojiPicker){
+            this.messageInput.setFocus();
+        }
 
         this.chatService.sendMsg(newMsg)
             .then( () => {

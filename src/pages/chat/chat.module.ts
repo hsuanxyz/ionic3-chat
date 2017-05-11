@@ -4,6 +4,7 @@ import { Chat } from './chat';
 import {ChatService} from "../../providers/chat-service";
 import {RelativeTime} from "../../pipes/relative-time";
 import {EmojiPickerComponentModule} from "../../components/emoji-picker/emoji-picker.module";
+import {EmojiProvider} from "../../providers/emoji";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {EmojiPickerComponentModule} from "../../components/emoji-picker/emoji-pi
   ],
   providers:[
     ChatService,
+    EmojiProvider
   ]
 })
 export class ChatModule {}

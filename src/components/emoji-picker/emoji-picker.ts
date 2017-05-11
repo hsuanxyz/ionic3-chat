@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {EmojiProvider} from "../../providers/emoji";
 
 /**
  * Generated class for the EmojiPickerComponent component.
@@ -12,11 +13,13 @@ import { Component } from '@angular/core';
 })
 export class EmojiPickerComponent {
 
-  text: string;
+  emojiArr = [];
 
-  constructor() {
+  constructor(
+      emojiProvider:EmojiProvider
+  ) {
     console.log('Hello EmojiPickerComponent Component');
-    this.text = 'Hello World';
+    this.emojiArr = emojiProvider.getEmojis();
   }
 
 }

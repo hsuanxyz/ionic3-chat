@@ -66,5 +66,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <emoji-picker [hidden]="!_isOpenEmojiPicker" [(ngModel)]="editorMsg"></emoji-picker>
+  <emoji-picker *ngIf="_isOpenEmojiPicker" [(ngModel)]="editorMsg"></emoji-picker>
 </ion-footer>

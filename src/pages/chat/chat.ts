@@ -1,6 +1,6 @@
 import {Component, ViewChild, ChangeDetectorRef} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Events, Content, TextInput } from 'ionic-angular';
+import { Events, Content, TextInput, ViewController } from 'ionic-angular';
 
 import { ChatService, ChatMessage} from "../../providers/chat-service";
 
@@ -42,16 +42,17 @@ export class Chat {
   }
 
     ionViewDidLoad() {
+      // this.switchEmojiPicker();
 
     }
 
     ionViewWillLeave(){
      // unsubscribe
      this.events.unsubscribe('chat:received')
-  }
+
+    }
 
     ionViewDidEnter(){
-
         //get message list
         this.getMsg()
             .then( () => {
@@ -66,7 +67,9 @@ export class Chat {
 
 
     switchEmojiPicker(){
-        this._isOpenEmojiPicker = !this._isOpenEmojiPicker
+        this._isOpenEmojiPicker = !this._isOpenEmojiPicker;
+        this.content.resize();
+        this.scrollToBottom();
     }
 
     /**

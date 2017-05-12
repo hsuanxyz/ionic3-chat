@@ -34,8 +34,14 @@
  │   │       └── favicon.ico
  │   │   └── to-user.jpg
  │   │   └── user.jpg
+ │   ├── components/emoji-picker               * emoji-picker component
+ │   │   └── emoji-picker.html
+ │   │   └── emoji-picker.module.ts
+ │   │   └── emoji-picker.scss
+ │   │   └── emoji-picker.ts
  │   ├── providers
  │   │   └── chat-service.ts                  * chat-service
+ │   │   └── emoji.ts                         * emoji-provider
  │   ├── pipes
  │   │   └── relative-time.ts                 * relative time pipes
  │   ├── pages
@@ -60,14 +66,17 @@
 
  ## Environment
  ```
- cordova CLI: 6.4.0
- Ionic Framework Version: 3.0.0
- Ionic CLI Version: 2.2.1
- Ionic App Lib Version: 2.2.0
- Ionic App Scripts Version: 1.2.2
- ios-deploy version: 1.9.1
- ios-sim version: 5.0.13
- OS: macOS Sierra
- Node Version: v6.9.2
- Xcode version: Xcode 8.3 Build version 8E162
+global packages:
+
+    @ionic/cli-utils : 1.0.0
+    Cordova CLI      : 6.4.0
+    Ionic CLI        : 3.0.0
+
+local packages:
+
+    @ionic/app-scripts              : 1.3.7
+    @ionic/cli-plugin-cordova       : 1.0.0
+    @ionic/cli-plugin-ionic-angular : 1.0.0
+    Ionic Framework                 : ionic-angular 3.2.0
+
  ```

@@ -77,6 +77,7 @@ local packages:
     @ionic/app-scripts              : 1.3.7
     @ionic/cli-plugin-cordova       : 1.0.0
     @ionic/cli-plugin-ionic-angular : 1.0.0
-    Ionic Framework                 : ionic-angular 3.2.0
+    Ionic Framework                 : ionic-angular 3.4.1
+
 
  ```

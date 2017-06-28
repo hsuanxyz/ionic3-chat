@@ -1,6 +1,8 @@
 # ionic3-chat
  ionic3 chat example
 
+[DEMO](https://hsuanxyz.github.io/demo/ionic-chat)
+
  ## Running
  * Clone this repository: `https://github.com/HsuanXyz/ionic3-chat.git`.
  * Run `npm install` from the project root.

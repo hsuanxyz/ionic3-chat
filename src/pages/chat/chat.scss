@@ -94,6 +94,9 @@ page-chat {
     .message.left{
       .msg-content{
         background-color: $toUserBackgroundColor;
+        width:auto;
+        float:left;
+        max-width:240px;
       }
       .msg-detail{
         padding-left: 60px;
@@ -132,6 +135,9 @@ page-chat {
       .msg-content{
         background-color: $userBackgroundColor;
         color: #fff;
+        width:auto;
+        float:right;
+        max-width:240px;
         span.triangle{
           background-color: $userBackgroundColor;
           border-bottom-width: 0;

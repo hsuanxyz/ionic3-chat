@@ -10,7 +10,7 @@
  * Run `ionic serve` in a terminal from the project root.
 
  ## App Preview
- <img src="https://github.com/HsuanXyz/hsuanxyz.github.io/blob/master/assets/ionic3-chat/ionic3-chat-v2.gif?raw=true" alt="Preview">
+ <img src="https://github.com/HsuanXyz/hsuanxyz.github.io/blob/master/assets/ionic3-chat/chat.gif?raw=true" alt="Preview">
 
  ## File Structure
  ```

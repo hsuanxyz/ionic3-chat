@@ -69,11 +69,8 @@
  ## Environment
  ```
 cli packages:
-
-    @ionic/cli-plugin-cordova       : 1.6.2
-    @ionic/cli-plugin-ionic-angular : 1.4.1
-    @ionic/cli-utils                : 1.7.0
-    ionic (Ionic CLI)               : 3.7.0
+    @ionic/cli-utils                : 1.9.2
+    ionic (Ionic CLI)               : 3.9.2
 
 global packages:
 

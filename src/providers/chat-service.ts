@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Events } from 'ionic-angular';
-
 import 'rxjs/add/operator/toPromise';
 
 export class ChatMessage {
     messageId: string;
     userId: string;
     userName: string;
-    userImgUrl: string;
+    userAvatar: string;
     toUserId: string;
     time: number | string;
     message: string;
@@ -16,9 +15,9 @@ export class ChatMessage {
 }
 
 export class UserInfo {
-    userId: string;
-    userName: string;
-    userImgUrl: string;
+    id: string;
+    name?: string;
+    avatar?: string;
 }
 
 @Injectable()
@@ -33,7 +32,7 @@ export class ChatService {
             messageId: Date.now().toString(),
             userId: '210000198410281948',
             userName: 'Hancock',
-            userImgUrl: './assets/to-user.jpg',
+            userAvatar: './assets/to-user.jpg',
             toUserId: '140000198202211138',
             time: Date.now(),
             message: msg.message,
@@ -60,9 +59,9 @@ export class ChatService {
 
     getUserInfo(): Promise<UserInfo> {
         const userInfo: UserInfo = {
-            userId: '140000198202211138',
-            userName: 'Luff',
-            userImgUrl: './assets/user.jpg'
+            id: '140000198202211138',
+            name: 'Luff',
+            avatar: './assets/user.jpg'
         };
         return new Promise(resolve => resolve(userInfo));
     }

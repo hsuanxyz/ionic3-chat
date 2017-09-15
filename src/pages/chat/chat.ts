@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavParams } from 'ionic-angular';
 import { Events, Content, TextInput } from 'ionic-angular';
-import { ChatService, ChatMessage } from "../../providers/chat-service";
+import { ChatService, ChatMessage, UserInfo } from "../../providers/chat-service";
 
 @IonicPage()
 @Component({
@@ -13,34 +13,29 @@ export class Chat {
     @ViewChild(Content) content: Content;
     @ViewChild('chat_input') messageInput: TextInput;
     msgList: ChatMessage[] = [];
-    userId: string;
-    userName: string;
-    userImgUrl: string;
-    toUserId: string;
-    toUserName: string;
-    editorMsg: string = '';
-    _isOpenEmojiPicker = false;
+    user: UserInfo;
+    toUser: UserInfo;
+    editorMsg = '';
+    showEmojiPicker = false;
 
     constructor(public navParams: NavParams,
                 public chatService: ChatService,
                 public events: Events,) {
-
         // Get the navParams toUserId parameter
-        this.toUserId = navParams.get('toUserId');
-        this.toUserName = navParams.get('toUserName');
+        this.toUser = {
+            id: navParams.get('toUserId'),
+            name: navParams.get('toUserName')
+        };
         // Get mock user information
         this.chatService.getUserInfo()
         .then((res) => {
-            this.userId = res.userId;
-            this.userName = res.userName;
-            this.userImgUrl = res.userImgUrl;
+            this.user = res
         });
     }
 
     ionViewWillLeave() {
         // unsubscribe
         this.events.unsubscribe('chat:received');
-
     }
 
     ionViewDidEnter() {
@@ -51,20 +46,20 @@ export class Chat {
         });
 
         // Subscribe to received  new message events
-        this.events.subscribe('chat:received', (msg, time) => {
+        this.events.subscribe('chat:received', msg => {
             this.pushNewMsg(msg);
         })
     }
 
-    _focus() {
-        this._isOpenEmojiPicker = false;
+    onFocus() {
+        this.showEmojiPicker = false;
         this.content.resize();
         this.scrollToBottom();
     }
 
     switchEmojiPicker() {
-        this._isOpenEmojiPicker = !this._isOpenEmojiPicker;
-        if (!this._isOpenEmojiPicker) {
+        this.showEmojiPicker = !this.showEmojiPicker;
+        if (!this.showEmojiPicker) {
             this.messageInput.setFocus();
         }
         this.content.resize();
@@ -91,17 +86,16 @@ export class Chat {
      * @name sendMsg
      */
     sendMsg() {
-
         if (!this.editorMsg.trim()) return;
 
         // Mock message
         const id = Date.now().toString();
         let newMsg: ChatMessage = {
             messageId: Date.now().toString(),
-            userId: this.userId,
-            userName: this.userName,
-            userImgUrl: this.userImgUrl,
-            toUserId: this.toUserId,
+            userId: this.user.id,
+            userName: this.user.name,
+            userAvatar: this.user.avatar,
+            toUserId: this.toUser.id,
             time: Date.now(),
             message: this.editorMsg,
             status: 'pending'
@@ -110,7 +104,7 @@ export class Chat {
         this.pushNewMsg(newMsg);
         this.editorMsg = '';
 
-        if (!this._isOpenEmojiPicker) {
+        if (!this.showEmojiPicker) {
             this.messageInput.setFocus();
         }
 
@@ -128,10 +122,12 @@ export class Chat {
      * @param msg
      */
     pushNewMsg(msg: ChatMessage) {
+        const userId = this.user.id,
+              toUserId = this.toUser.id;
         // Verify user relationships
-        if (msg.userId === this.userId && msg.toUserId === this.toUserId) {
+        if (msg.userId === userId && msg.toUserId === toUserId) {
             this.msgList.push(msg);
-        } else if (msg.toUserId === this.userId && msg.userId === this.toUserId) {
+        } else if (msg.toUserId === userId && msg.userId === toUserId) {
             this.msgList.push(msg);
         }
         this.scrollToBottom();

@@ -12,16 +12,15 @@
 
 </ion-header>
 
-
 <ion-content>
 
     <div class="message-wrap">
 
         <div *ngFor="let msg of msgList"
              class="message"
-             [class.left]=" msg.userId === toUserId "
-             [class.right]=" msg.userId === userId ">
-            <img class="user-img" [src]="msg.userImgUrl" alt="" src="">
+             [class.left]=" msg.userId === toUser.id "
+             [class.right]=" msg.userId === user.id ">
+            <img class="user-img" [src]="msg.userAvatar" alt="" src="">
             <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
             <div class="msg-detail">
                 <div class="msg-info">
@@ -39,7 +38,7 @@
 
 </ion-content>
 
-<ion-footer no-border [style.height]="_isOpenEmojiPicker ? '255px' : '55px'">
+<ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'">
     <ion-grid class="input-wrap">
         <ion-row>
             <ion-col col-2>
@@ -52,7 +51,7 @@
                               placeholder="Text Input"
                               [(ngModel)]="editorMsg"
                               (keyup.enter)="sendMsg()"
-                              (focus)="_focus()">
+                              (focus)="onFocus()">
                 </ion-textarea>
             </ion-col>
             <ion-col col-2>
@@ -62,5 +61,5 @@
             </ion-col>
         </ion-row>
     </ion-grid>
-    <emoji-picker *ngIf="_isOpenEmojiPicker" [(ngModel)]="editorMsg"></emoji-picker>
+    <emoji-picker *ngIf="showEmojiPicker" [(ngModel)]="editorMsg"></emoji-picker>
 </ion-footer>

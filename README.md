@@ -68,9 +68,10 @@
 
  ## Environment
  ```
-cli packages:
-    @ionic/cli-utils                : 1.9.2
-    ionic (Ionic CLI)               : 3.9.2
+cli packages: 
+
+    @ionic/cli-utils  : 1.10.2
+    ionic (Ionic CLI) : 3.10.3
 
 global packages:
 
@@ -78,17 +79,18 @@ global packages:
 
 local packages:
 
-    @ionic/app-scripts : 2.1.3
+    @ionic/app-scripts : 2.1.4
     Cordova Platforms  : android 6.0.0 browser 4.1.0 ios 4.1.1
-    Ionic Framework    : ionic-angular 3.6.0
+    Ionic Framework    : ionic-angular 3.6.1
 
 System:
 
-    Node       : v6.9.2
-    OS         : macOS Sierra
-    Xcode      : Xcode 8.3.3 Build version 8E3004b 
     ios-deploy : 1.9.1 
     ios-sim    : 6.0.0 
+    Node       : v6.9.2
     npm        : 3.10.9 
+    OS         : macOS Sierra
+    Xcode      : Xcode 8.3.3 Build version 8E3004b 
+
 
  ```

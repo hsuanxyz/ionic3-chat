@@ -28,7 +28,7 @@
     "cordova-plugin-splashscreen": "~4.0.1",
     "cordova-plugin-statusbar": "2.2.1",
     "cordova-plugin-whitelist": "1.3.1",
-    "ionic-angular": "^3.6.0",
+    "ionic-angular": "^3.6.1",
     "ionic-plugin-keyboard": "~2.2.1",
     "ionicons": "3.0.0",
     "moment": "^2.18.1",
@@ -37,11 +37,11 @@
     "zone.js": "0.8.12"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "^2.1.3",
+    "@ionic/app-scripts": "^2.1.4",
     "@ionic/cli-plugin-cordova": "1.6.2",
     "@ionic/cli-plugin-ionic-angular": "1.4.1",
     "cross-spawn": "^5.1.0",
-    "ionic": "3.9.2",
+    "ionic": "3.10.3",
     "typescript": "2.3.4"
   },
   "cordovaPlugins": [

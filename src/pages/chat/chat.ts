@@ -1,8 +1,7 @@
-import {Component, ViewChild} from '@angular/core';
-import {IonicPage, NavParams} from 'ionic-angular';
-import {Events, Content, TextInput} from 'ionic-angular';
-
-import {ChatService, ChatMessage} from "../../providers/chat-service";
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavParams } from 'ionic-angular';
+import { Events, Content, TextInput } from 'ionic-angular';
+import { ChatService, ChatMessage } from "../../providers/chat-service";
 
 @IonicPage()
 @Component({
@@ -31,16 +30,11 @@ export class Chat {
         this.toUserName = navParams.get('toUserName');
         // Get mock user information
         this.chatService.getUserInfo()
-            .then((res) => {
-                this.userId = res.userId;
-                this.userName = res.userName;
-                this.userImgUrl = res.userImgUrl;
-            });
-    }
-
-    ionViewDidLoad() {
-        // this.switchEmojiPicker();
-
+        .then((res) => {
+            this.userId = res.userId;
+            this.userName = res.userName;
+            this.userImgUrl = res.userImgUrl;
+        });
     }
 
     ionViewWillLeave() {
@@ -52,9 +46,9 @@ export class Chat {
     ionViewDidEnter() {
         //get message list
         this.getMsg()
-            .then(() => {
-                this.scrollToBottom();
-            });
+        .then(() => {
+            this.scrollToBottom();
+        });
 
         // Subscribe to received  new message events
         this.events.subscribe('chat:received', (msg, time) => {
@@ -84,13 +78,13 @@ export class Chat {
     getMsg() {
         // Get mock message list
         return this.chatService
-            .getMsgList()
-            .then(res => {
-                this.msgList = res;
-            })
-            .catch(err => {
-                console.log(err)
-            })
+        .getMsgList()
+        .then(res => {
+            this.msgList = res;
+        })
+        .catch(err => {
+            console.log(err)
+        })
     }
 
     /**
@@ -121,12 +115,12 @@ export class Chat {
         }
 
         this.chatService.sendMsg(newMsg)
-            .then(() => {
-                let index = this.getMsgIndexById(id);
-                if (index !== -1) {
-                    this.msgList[index].status = 'success';
-                }
-            })
+        .then(() => {
+            let index = this.getMsgIndexById(id);
+            if (index !== -1) {
+                this.msgList[index].status = 'success';
+            }
+        })
     }
 
     /**

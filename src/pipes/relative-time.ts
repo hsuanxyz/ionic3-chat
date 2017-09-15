@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import * as moment from 'moment';
+
 /**
  * Generated class for the RelativeTime pipe.
  *
@@ -7,13 +8,13 @@ import * as moment from 'moment';
  * Angular Pipes.
  */
 @Pipe({
-  name: 'relativeTime',
+    name: 'relativeTime',
 })
 export class RelativeTime implements PipeTransform {
-  /**
-   * Takes a value and makes it lowercase.
-   */
-  transform(value: string, ...args) {
-    return moment(value).toNow();
-  }
+    /**
+     * Takes a value and makes it lowercase.
+     */
+    transform(value: string, ...args) {
+        return moment(value).toNow();
+    }
 }

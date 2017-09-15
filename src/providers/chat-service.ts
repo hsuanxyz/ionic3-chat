@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
-import {Events} from 'ionic-angular';
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Events } from 'ionic-angular';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -48,14 +48,14 @@ export class ChatService {
     getMsgList(): Promise<ChatMessage[]> {
         const msgListUrl = './assets/mock/msg-list.json';
         return this.http.get(msgListUrl)
-            .toPromise()
-            .then(response => response.json().array as ChatMessage[])
-            .catch(err => Promise.reject(err || 'err'));
+        .toPromise()
+        .then(response => response.json().array as ChatMessage[])
+        .catch(err => Promise.reject(err || 'err'));
     }
 
     sendMsg(msg: ChatMessage) {
         return new Promise(resolve => setTimeout(() => resolve(msg), Math.random() * 1000))
-            .then(() => this.mockNewMsg(msg));
+        .then(() => this.mockNewMsg(msg));
     }
 
     getUserInfo(): Promise<UserInfo> {

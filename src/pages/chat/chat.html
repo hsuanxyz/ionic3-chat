@@ -6,65 +6,61 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>{{toUserName}}</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>{{toUserName}}</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
 
-  <div class="message-wrap">
+    <div class="message-wrap">
 
-    <div *ngFor="let msg of msgList"
-         class="message"
-         [class.left]=" msg.userId === toUserId "
-         [class.right]=" msg.userId === userId ">
-      <img class="user-img" [src]="msg.userImgUrl" alt="" src="">
-      <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
-      <div class="msg-detail">
-        <div class="msg-info">
-          <p>
-            {{msg.userName}}&nbsp;&nbsp;&nbsp;{{msg.time | relativeTime}}</p>
+        <div *ngFor="let msg of msgList"
+             class="message"
+             [class.left]=" msg.userId === toUserId "
+             [class.right]=" msg.userId === userId ">
+            <img class="user-img" [src]="msg.userImgUrl" alt="" src="">
+            <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
+            <div class="msg-detail">
+                <div class="msg-info">
+                    <p>
+                        {{msg.userName}}&nbsp;&nbsp;&nbsp;{{msg.time | relativeTime}}</p>
+                </div>
+                <div class="msg-content">
+                    <span class="triangle"></span>
+                    <p class="line-breaker ">{{msg.message}}</p>
+                </div>
+            </div>
         </div>
-        <div class="msg-content">
-          <span class="triangle"></span>
-          <p class="line-breaker ">{{msg.message}}</p>
-        </div>
-      </div>
+
     </div>
-
-  </div>
 
 </ion-content>
 
 <ion-footer no-border [style.height]="_isOpenEmojiPicker ? '255px' : '55px'">
-  <ion-grid class="input-wrap">
-    <ion-row>
-
-      <ion-col col-2>
-        <button ion-button clear icon-only item-right
-                (click)="switchEmojiPicker()" >
-          <ion-icon  name="md-happy"></ion-icon>
-        </button>
-      </ion-col>
-      <ion-col col-8>
-        <ion-textarea
-                #chat_input
-                placeholder="Text Input"
-                [(ngModel)]="editorMsg"
-                (keyup.enter)="sendMsg()"
-                (focus)="_focus()"
-        ></ion-textarea>
-      </ion-col>
-      <ion-col col-2>
-        <button ion-button clear icon-only item-right
-                (click)="sendMsg()" >
-          <ion-icon  name="ios-send" ios="ios-send" md="md-send"></ion-icon>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <emoji-picker *ngIf="_isOpenEmojiPicker" [(ngModel)]="editorMsg"></emoji-picker>
+    <ion-grid class="input-wrap">
+        <ion-row>
+            <ion-col col-2>
+                <button ion-button clear icon-only item-right (click)="switchEmojiPicker()">
+                    <ion-icon name="md-happy"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col col-8>
+                <ion-textarea #chat_input
+                              placeholder="Text Input"
+                              [(ngModel)]="editorMsg"
+                              (keyup.enter)="sendMsg()"
+                              (focus)="_focus()">
+                </ion-textarea>
+            </ion-col>
+            <ion-col col-2>
+                <button ion-button clear icon-only item-right (click)="sendMsg()">
+                    <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <emoji-picker *ngIf="_isOpenEmojiPicker" [(ngModel)]="editorMsg"></emoji-picker>
 </ion-footer>

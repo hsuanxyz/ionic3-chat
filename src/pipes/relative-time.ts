@@ -15,6 +15,6 @@ export class RelativeTime implements PipeTransform {
      * Takes a value and makes it lowercase.
      */
     transform(value: string, ...args) {
-        return moment(value).toNow();
+        return moment(value).fromNow();
     }
 }

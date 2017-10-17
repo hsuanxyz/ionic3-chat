@@ -71,7 +71,7 @@
 cli packages: 
 
     @ionic/cli-utils  : 1.12.0
-    ionic (Ionic CLI) : 3.12.0
+    ionic (Ionic CLI) : 3.13.1
 
 global packages:
 

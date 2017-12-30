@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import { Events } from 'ionic-angular';
-import 'rxjs/add/operator/toPromise';
+import { map } from 'rxjs/operators/map';
+import { HttpClient } from "@angular/common/http";
+import {Observable} from "rxjs/Observable";
 
 export class ChatMessage {
     messageId: string;
@@ -23,8 +24,8 @@ export class UserInfo {
 @Injectable()
 export class ChatService {
 
-    constructor(public http: Http,
-                public events: Events) {
+    constructor(private http: HttpClient,
+                private events: Events) {
     }
 
     mockNewMsg(msg) {
@@ -44,12 +45,10 @@ export class ChatService {
         }, Math.random() * 1800)
     }
 
-    getMsgList(): Promise<ChatMessage[]> {
+    getMsgList(): Observable<ChatMessage[]> {
         const msgListUrl = './assets/mock/msg-list.json';
-        return this.http.get(msgListUrl)
-        .toPromise()
-        .then(response => response.json().array as ChatMessage[])
-        .catch(err => Promise.reject(err || 'err'));
+        return this.http.get<any>(msgListUrl)
+          .pipe(map(response => response.array));
     }
 
     sendMsg(msg: ChatMessage) {

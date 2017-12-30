@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import {NavController, IonicPage} from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -9,9 +8,9 @@ import {NavController, IonicPage} from 'ionic-angular';
 })
 export class HomePage {
 
-  toUser:Object;
+  toUser : {toUserId: string, toUserName: string};
 
-  constructor(public navCtrl: NavController) {
+  constructor() {
     this.toUser = {
       toUserId:'210000198410281948',
       toUserName:'Hancock'

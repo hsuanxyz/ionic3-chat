@@ -18,9 +18,9 @@ export class Chat {
     editorMsg = '';
     showEmojiPicker = false;
 
-    constructor(public navParams: NavParams,
-                public chatService: ChatService,
-                public events: Events,) {
+    constructor(navParams: NavParams,
+                private chatService: ChatService,
+                private events: Events,) {
         // Get the navParams toUserId parameter
         this.toUser = {
             id: navParams.get('toUserId'),
@@ -40,10 +40,7 @@ export class Chat {
 
     ionViewDidEnter() {
         //get message list
-        this.getMsg()
-        .then(() => {
-            this.scrollToBottom();
-        });
+        this.getMsg();
 
         // Subscribe to received  new message events
         this.events.subscribe('chat:received', msg => {
@@ -70,16 +67,14 @@ export class Chat {
      * @name getMsg
      * @returns {Promise<ChatMessage[]>}
      */
-    getMsg() {
+    private getMsg() {
         // Get mock message list
         return this.chatService
         .getMsgList()
-        .then(res => {
+        .subscribe(res => {
             this.msgList = res;
-        })
-        .catch(err => {
-            console.log(err)
-        })
+            this.scrollToBottom();
+        });
     }
 
     /**

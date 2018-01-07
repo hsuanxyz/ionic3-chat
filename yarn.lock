@@ -2,83 +2,83 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/build-optimizer@0.0.32":
-  version "0.0.32"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.0.32.tgz#1bf32332d8a7c84043059e3d265a52f9d11726fd"
+"@angular-devkit/build-optimizer@0.0.35":
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.0.35.tgz#3aadad1d7e9ffc7dcd106fda8a5670465936562c"
   dependencies:
     loader-utils "^1.1.0"
     source-map "^0.5.6"
-    typescript "^2.3.3"
+    typescript "~2.6.1"
     webpack-sources "^1.0.1"
 
-"@angular/common@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-5.0.0.tgz#f96d66a517b995d1ba9b28309f15c2e359675825"
+"@angular/common@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-5.1.2.tgz#b2659161575d463bb8b3e30e37434b26d70366b4"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/compiler-cli@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-5.0.0.tgz#0ecbb937d84a4f8dd94f0c2a47b07d2e4694c853"
+"@angular/compiler-cli@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-5.1.2.tgz#70addc11b6528f087abe809f94acedecdfc9c8f6"
   dependencies:
     chokidar "^1.4.2"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
-    tsickle "^0.24.0"
+    tsickle "^0.25.5"
 
-"@angular/compiler@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-5.0.0.tgz#b9ffbf18c8a39d8b7dacec473193a90e24cc2bc9"
+"@angular/compiler@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-5.1.2.tgz#4dfd0dd7fab39a14a1a104097c2f6af470ddabdb"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/core@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-5.0.0.tgz#4f976a225f7dddf34992f2cad824c9543a46f4c8"
+"@angular/core@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-5.1.2.tgz#751070c0f4e5a8c4e2170204e08eca06391b84b1"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/forms@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-5.0.0.tgz#c7fddfa35396759ae9852920a30cdda8c41ed1de"
+"@angular/forms@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-5.1.2.tgz#fae4934ccdd41443efdee49b754c8b2a5587b12c"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/http@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/http/-/http-5.0.0.tgz#0728a2be0cfbb078727c5eb87d4c85d53fec9a51"
+"@angular/http@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-5.1.2.tgz#38edf3bec056e9c3456868799f4c0f83127c73b9"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/platform-browser-dynamic@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.0.0.tgz#887e106c8b103b0415cf6156a425da6d83f4c89d"
+"@angular/platform-browser-dynamic@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.1.2.tgz#120d49ce16bcb91b8ac1c5e5c634fba592359ad7"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/platform-browser@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-5.0.0.tgz#c7038f7cde80705b62014897231e182eec976fed"
+"@angular/platform-browser@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-5.1.2.tgz#6faf926b9b41b6d54d873f3dcc4f31ad35fd0c38"
   dependencies:
     tslib "^1.7.1"
 
-"@ionic-native/core@3.12.1":
-  version "3.12.1"
-  resolved "http://registry.npm.taobao.org/@ionic-native/core/download/@ionic-native/core-3.12.1.tgz#5b7c7a4f5adfc8da0b9197e1843e5893acf66021"
+"@ionic-native/core@4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@ionic-native/core/-/core-4.5.2.tgz#56c1ee0d3e9dd3f02c29c26eeb868ab36a48a6f5"
 
-"@ionic-native/splash-screen@3.12.1":
-  version "3.12.1"
-  resolved "http://registry.npm.taobao.org/@ionic-native/splash-screen/download/@ionic-native/splash-screen-3.12.1.tgz#1c2e468e225d5b90cad7b48fc05505d4c761ace6"
+"@ionic-native/splash-screen@4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@ionic-native/splash-screen/-/splash-screen-4.5.2.tgz#f4484e8a50e33edacfd07f934c118635c78772cd"
 
-"@ionic-native/status-bar@3.12.1":
-  version "3.12.1"
-  resolved "http://registry.npm.taobao.org/@ionic-native/status-bar/download/@ionic-native/status-bar-3.12.1.tgz#5b2491b43a3d7e08d65ac0e9fdb1927493e32472"
+"@ionic-native/status-bar@4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@ionic-native/status-bar/-/status-bar-4.5.2.tgz#8c32d48f3c46ea7477e99e8605d4dd885ab03805"
 
-"@ionic/app-scripts@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@ionic/app-scripts/-/app-scripts-3.1.0.tgz#7bc598c9af0cda466c3989ee341d3db10b638e48"
+"@ionic/app-scripts@3.1.7":
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/@ionic/app-scripts/-/app-scripts-3.1.7.tgz#69ef5cad814e37382e9e3510438d76467d107195"
   dependencies:
-    "@angular-devkit/build-optimizer" "0.0.32"
+    "@angular-devkit/build-optimizer" "0.0.35"
     autoprefixer "^7.1.6"
     chalk "^2.3.0"
     chokidar "^1.7.0"
@@ -100,36 +100,32 @@
     tiny-lr "^1.0.5"
     tslint "^5.8.0"
     tslint-eslint-rules "^4.1.1"
-    uglify-es "^3.1.6"
-    webpack "^3.8.1"
-    ws "^3.2.0"
+    uglify-es "3.2.2"
+    webpack "3.8.1"
+    ws "3.3.2"
     xml2js "^0.4.19"
 
-"@ionic/cli-plugin-cordova@1.6.2":
-  version "1.6.2"
-  resolved "http://registry.npm.taobao.org/@ionic/cli-plugin-cordova/download/@ionic/cli-plugin-cordova-1.6.2.tgz#f71d10641df8b522f54f8274e0d5bc4dbb8b5208"
+"@ionic/cli-framework@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@ionic/cli-framework/-/cli-framework-0.1.2.tgz#5b094dc30ba045c8022de871e793965f1c9b1214"
   dependencies:
-    "@ionic/cli-utils" "1.7.0"
-    chalk "^2.0.0"
-    elementtree "^0.1.7"
-    tslib "^1.7.1"
+    chalk "^2.3.0"
+    ncp "^2.0.0"
+    rimraf "^2.6.2"
+    strip-ansi "^4.0.0"
+    superagent "^3.8.0"
+    tslib "^1.8.0"
 
-"@ionic/cli-plugin-ionic-angular@1.4.1":
-  version "1.4.1"
-  resolved "http://registry.npm.taobao.org/@ionic/cli-plugin-ionic-angular/download/@ionic/cli-plugin-ionic-angular-1.4.1.tgz#bb94b7ad61c2f79757b2dff041c0b7e2151777ec"
+"@ionic/cli-utils@1.19.0":
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/@ionic/cli-utils/-/cli-utils-1.19.0.tgz#80b1cfab7fee812d4415f518c12515dd4c1a7b80"
   dependencies:
-    "@ionic/cli-utils" "1.7.0"
-    chalk "^2.0.0"
-    tslib "^1.7.1"
-
-"@ionic/cli-utils@1.13.1":
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/@ionic/cli-utils/-/cli-utils-1.13.1.tgz#7360cf7501b804cea98694d322dd9d96da9dc337"
-  dependencies:
+    "@ionic/cli-framework" "0.1.2"
+    "@ionic/discover" "0.4.0"
     archiver "^2.1.0"
     basic-auth "^1.1.0"
     body-parser "^1.18.1"
-    chalk "^2.0.0"
+    chalk "^2.3.0"
     chokidar "^1.7.0"
     ci-info "^1.1.1"
     cross-spawn "^5.1.0"
@@ -137,53 +133,28 @@
     diff "^3.4.0"
     elementtree "^0.1.7"
     express "^4.16.2"
+    http-proxy-middleware "^0.17.4"
     inquirer "^3.3.0"
     leek "0.0.24"
     lodash "^4.17.4"
     minimist "^1.2.0"
-    ncp "^2.0.0"
     opn "^5.1.0"
-    proxy-middleware "^0.15.0"
+    os-name "^2.0.1"
     semver "^5.4.1"
     slice-ansi "^1.0.0"
     ssh-config "^1.1.1"
     string-width "^2.1.1"
-    strip-ansi "^4.0.0"
-    superagent "^3.6.3"
-    tar "^2.2.1"
+    superagent "^3.8.0"
+    tar "^4.0.2"
     tiny-lr "^1.0.5"
     tslib "^1.8.0"
     uuid "^3.0.1"
     wrap-ansi "^3.0.1"
     ws "^3.2.0"
 
-"@ionic/cli-utils@1.7.0":
-  version "1.7.0"
-  resolved "http://registry.npm.taobao.org/@ionic/cli-utils/download/@ionic/cli-utils-1.7.0.tgz#05bdbf3e7533eeeee27d58f3adbfe26bf2bf0d1d"
-  dependencies:
-    archiver "^2.0.0"
-    chalk "^2.0.0"
-    ci-info "^1.0.0"
-    cross-spawn "^5.1.0"
-    dargs "^5.1.0"
-    dev-null "^0.1.1"
-    inquirer "^3.2.1"
-    leek "0.0.24"
-    lodash "^4.17.4"
-    minimist "^1.2.0"
-    ncp "^2.0.0"
-    semver "^5.4.1"
-    slice-ansi "^1.0.0"
-    string-width "^2.1.1"
-    strip-ansi "^4.0.0"
-    superagent "^3.5.2"
-    tslib "^1.7.1"
-    uuid "^3.0.1"
-    wrap-ansi "^3.0.1"
-
-"@ionic/discover@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@ionic/discover/-/discover-0.3.3.tgz#fcdb1e933a39c6e16b2eb5edf3dff06c284bd24d"
+"@ionic/discover@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@ionic/discover/-/discover-0.4.0.tgz#1229538e6b27b3175df4fe09dfd23f709440bfdd"
   dependencies:
     netmask "^1.0.6"
 
@@ -232,10 +203,6 @@ acorn@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.2.1.tgz#317ac7821826c22c702d66189ab8359675f135d7"
 
-adm-zip@^0.4.7:
-  version "0.4.7"
-  resolved "http://registry.npm.taobao.org/adm-zip/download/adm-zip-0.4.7.tgz#8606c2cbf1c426ce8c8ec00174447fd49b6eafc1"
-
 ajv-keywords@^2.0.0:
   version "2.1.0"
   resolved "http://registry.npm.taobao.org/ajv-keywords/download/ajv-keywords-2.1.0.tgz#a296e17f7bfae7c1ce4f7e0de53d29cb32162df0"
@@ -267,6 +234,12 @@ align-text@^0.1.1, align-text@^0.1.3:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/amdefine/download/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+
+android-versions@^1.2.1:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/android-versions/-/android-versions-1.2.2.tgz#9db84b5684c585a4c34152d7b7c1fdf1f56db97b"
+  dependencies:
+    semver "^5.4.1"
 
 ansi-escapes@^3.0.0:
   version "3.0.0"
@@ -315,20 +288,6 @@ archiver-utils@^1.3.0:
     lodash "^4.8.0"
     normalize-path "^2.0.0"
     readable-stream "^2.0.0"
-
-archiver@^2.0.0:
-  version "2.0.3"
-  resolved "http://registry.npm.taobao.org/archiver/download/archiver-2.0.3.tgz#b4360bb584af1437991942716f21d7c523d1dbbd"
-  dependencies:
-    archiver-utils "^1.3.0"
-    async "^2.0.0"
-    buffer-crc32 "^0.2.1"
-    glob "^7.0.0"
-    lodash "^4.8.0"
-    readable-stream "^2.0.0"
-    tar-stream "^1.5.0"
-    walkdir "^0.0.11"
-    zip-stream "^1.2.0"
 
 archiver@^2.1.0:
   version "2.1.0"
@@ -766,7 +725,11 @@ chokidar@^1.4.2, chokidar@^1.7.0:
   optionalDependencies:
     fsevents "^1.0.0"
 
-ci-info@^1.0.0, ci-info@^1.1.1:
+chownr@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181"
+
+ci-info@^1.1.1:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/ci-info/download/ci-info-1.1.1.tgz#47b44df118c48d2597b56d342e7e25791060171a"
 
@@ -914,26 +877,26 @@ cookiejar@^2.1.0:
   version "2.1.1"
   resolved "http://registry.npm.taobao.org/cookiejar/download/cookiejar-2.1.1.tgz#41ad57b1b555951ec171412a81942b1e8200d34a"
 
-cordova-android@~6.0.0:
-  version "6.0.0"
-  resolved "http://registry.npm.taobao.org/cordova-android/download/cordova-android-6.0.0.tgz#a59acd7273d202fc6e29642f7ee7af398485c64c"
+cordova-android@~7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/cordova-android/-/cordova-android-7.0.0.tgz#c95bedfcfbc3863b180c4d29effec4f79361d19d"
   dependencies:
-    cordova-common "^1.5.0"
-    elementtree "^0.1.6"
+    android-versions "^1.2.1"
+    cordova-common "^2.2.0"
+    elementtree "0.1.6"
     nopt "^3.0.1"
     properties-parser "^0.2.3"
     q "^1.4.1"
     shelljs "^0.5.3"
 
-cordova-browser@~4.1.0:
-  version "4.1.0"
-  resolved "http://registry.npm.taobao.org/cordova-browser/download/cordova-browser-4.1.0.tgz#75079065e5cd50aa6743cbd85317617053fb20c6"
+cordova-browser@~5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/cordova-browser/-/cordova-browser-5.0.3.tgz#f7e54202fdf09694385d78c0ad872410cb094df5"
   dependencies:
-    adm-zip "^0.4.7"
-    cordova-serve "^1.0.0"
+    cordova-common "^2.1.1"
+    cordova-serve "^2.0.0"
     nopt "^3.0.6"
-    q "^1.4.1"
-    shelljs "^0.6.0"
+    shelljs "^0.5.3"
 
 cordova-common@2.1.0:
   version "2.1.0"
@@ -953,14 +916,14 @@ cordova-common@2.1.0:
     underscore "^1.8.3"
     unorm "^1.3.3"
 
-cordova-common@^1.5.0:
-  version "1.5.1"
-  resolved "http://registry.npm.taobao.org/cordova-common/download/cordova-common-1.5.1.tgz#6770de0d6200ad6f94a1abe8939b5bd9ece139e3"
+cordova-common@^2.1.1, cordova-common@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/cordova-common/-/cordova-common-2.2.1.tgz#7009bc591729caa7285a588cfd6a7b54cd834f0c"
   dependencies:
     ansi "^0.3.1"
     bplist-parser "^0.1.0"
     cordova-registry-mapper "^1.1.8"
-    elementtree "^0.1.6"
+    elementtree "0.1.6"
     glob "^5.0.13"
     minimatch "^3.0.0"
     osenv "^0.1.3"
@@ -971,9 +934,9 @@ cordova-common@^1.5.0:
     underscore "^1.8.3"
     unorm "^1.3.3"
 
-cordova-ios@^4.4.0:
-  version "4.5.1"
-  resolved "http://registry.npm.taobao.org/cordova-ios/download/cordova-ios-4.5.1.tgz#d17b21048c782e75190f8d05a7983c7af34cb585"
+cordova-ios@^4.5.4:
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/cordova-ios/-/cordova-ios-4.5.4.tgz#c80648058972968570dc15da97314ff92d07dfe7"
   dependencies:
     cordova-common "2.1.0"
     ios-sim "^6.1.2"
@@ -984,38 +947,39 @@ cordova-ios@^4.4.0:
     xcode "^0.9.0"
     xml-escape "^1.1.0"
 
-cordova-plugin-console@1.0.5:
-  version "1.0.5"
-  resolved "http://registry.npm.taobao.org/cordova-plugin-console/download/cordova-plugin-console-1.0.5.tgz#f0e29aee9c03cab9e9d883b01d19f22ddd5c8570"
+cordova-plugin-console@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-console/-/cordova-plugin-console-1.1.0.tgz#e2fbac10290179e44cb72c5fdbc410a531c1cd6d"
 
-cordova-plugin-device@1.1.4:
-  version "1.1.4"
-  resolved "http://registry.npm.taobao.org/cordova-plugin-device/download/cordova-plugin-device-1.1.4.tgz#d5fe74712069d03f6d386ef0bd321b3abd0d38dc"
+cordova-plugin-device@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-device/-/cordova-plugin-device-2.0.0.tgz#158440e398e55190524b2be060f63cfcbdc829c8"
 
-cordova-plugin-splashscreen@~4.0.1:
-  version "4.0.3"
-  resolved "http://registry.npm.taobao.org/cordova-plugin-splashscreen/download/cordova-plugin-splashscreen-4.0.3.tgz#773cd1363c1f3bacb9901663e9e3793dd3e0a19d"
+cordova-plugin-splashscreen@~5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-splashscreen/-/cordova-plugin-splashscreen-5.0.1.tgz#e227172593942c2479b0e1f769feddc21c8b55a3"
 
-cordova-plugin-statusbar@2.2.1:
-  version "2.2.1"
-  resolved "http://registry.npm.taobao.org/cordova-plugin-statusbar/download/cordova-plugin-statusbar-2.2.1.tgz#b51c0e1aab2ba66edb77ce52bf2b93fc806c8c70"
+cordova-plugin-statusbar@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-statusbar/-/cordova-plugin-statusbar-2.4.0.tgz#24eb2973795d10f6f1ae3202f74f88c7d990cf20"
 
-cordova-plugin-whitelist@1.3.1:
-  version "1.3.1"
-  resolved "http://registry.npm.taobao.org/cordova-plugin-whitelist/download/cordova-plugin-whitelist-1.3.1.tgz#9fd1db7fd6c956951d34771cdcd97f66ced516df"
+cordova-plugin-whitelist@1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-whitelist/-/cordova-plugin-whitelist-1.3.3.tgz#b5e85ecdbbfe5aeded40a1bf4ee2372e67d96fb4"
 
 cordova-registry-mapper@^1.1.8:
   version "1.1.15"
   resolved "http://registry.npm.taobao.org/cordova-registry-mapper/download/cordova-registry-mapper-1.1.15.tgz#e244b9185b8175473bff6079324905115f83dc7c"
 
-cordova-serve@^1.0.0:
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/cordova-serve/download/cordova-serve-1.0.1.tgz#895c7fb4bbe630fa1c89feaf6d74779cbff66da7"
+cordova-serve@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/cordova-serve/-/cordova-serve-2.0.0.tgz#d7834b83b186607e2b8f1943e073c0633360ea43"
   dependencies:
     chalk "^1.1.1"
     compression "^1.6.0"
     express "^4.13.3"
-    q "^1.4.1"
+    open "0.0.5"
+    shelljs "^0.5.3"
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -1123,6 +1087,10 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+date-fns@^1.29.0:
+  version "1.29.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
+
 date-now@^0.1.4:
   version "0.1.4"
   resolved "http://registry.npm.taobao.org/date-now/download/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
@@ -1170,10 +1138,6 @@ destroy@~1.0.4:
   version "1.0.4"
   resolved "http://registry.npm.taobao.org/destroy/download/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
 
-dev-null@^0.1.1:
-  version "0.1.1"
-  resolved "http://registry.npm.taobao.org/dev-null/download/dev-null-0.1.1.tgz#5a205ce3c2b2ef77b6238d6ba179eb74c6a0e818"
-
 diff@^3.2.0, diff@^3.4.0:
   version "3.4.0"
   resolved "http://registry.npm.taobao.org/diff/download/diff-3.4.0.tgz#b1d85507daf3964828de54b37d0d73ba67dda56c"
@@ -1217,7 +1181,7 @@ elementtree@0.1.6:
   dependencies:
     sax "0.3.5"
 
-elementtree@^0.1.6, elementtree@^0.1.7:
+elementtree@^0.1.7:
   version "0.1.7"
   resolved "http://registry.npm.taobao.org/elementtree/download/elementtree-0.1.7.tgz#9ac91be6e52fb6e6244c4e54a4ac3ed8ae8e29c0"
   dependencies:
@@ -1403,6 +1367,10 @@ event-emitter@~0.3.5:
   dependencies:
     d "1"
     es5-ext "~0.10.14"
+
+eventemitter3@1.x.x:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
 
 events@^1.0.0:
   version "1.1.1"
@@ -1649,6 +1617,12 @@ fs-extra@^4.0.2:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-minipass@^1.2.3:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
+  dependencies:
+    minipass "^2.2.1"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/fs.realpath/download/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -1867,6 +1841,22 @@ http-parser-js@>=0.4.0:
   version "0.4.9"
   resolved "http://registry.npm.taobao.org/http-parser-js/download/http-parser-js-0.4.9.tgz#ea1a04fb64adff0242e9974f297dd4c3cad271e1"
 
+http-proxy-middleware@^0.17.4:
+  version "0.17.4"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-0.17.4.tgz#642e8848851d66f09d4f124912846dbaeb41b833"
+  dependencies:
+    http-proxy "^1.16.2"
+    is-glob "^3.1.0"
+    lodash "^4.17.2"
+    micromatch "^2.3.11"
+
+http-proxy@^1.16.2:
+  version "1.16.2"
+  resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.16.2.tgz#06dff292952bf64dbe8471fa9df73066d4f37742"
+  dependencies:
+    eventemitter3 "1.x.x"
+    requires-port "1.x.x"
+
 http-signature@~1.1.0:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/http-signature/download/http-signature-1.1.1.tgz#df72e267066cd0ac67fb76adf8e134a8fbcf91bf"
@@ -1939,7 +1929,7 @@ inline-process-browser@^1.0.0:
     falafel "^1.0.1"
     through2 "^0.6.5"
 
-inquirer@^3.2.1, inquirer@^3.3.0:
+inquirer@^3.3.0:
   version "3.3.0"
   resolved "http://registry.npm.taobao.org/inquirer/download/inquirer-3.3.0.tgz#9dd2f2ad765dcab1ff0443b491442a20ba227dc9"
   dependencies:
@@ -1974,16 +1964,14 @@ ionic-plugin-keyboard@~2.2.1:
   version "2.2.1"
   resolved "http://registry.npm.taobao.org/ionic-plugin-keyboard/download/ionic-plugin-keyboard-2.2.1.tgz#f2a9e169bbe9b5522400347c9fd6d3467ee3fa12"
 
-ionic@3.13.1:
-  version "3.13.1"
-  resolved "https://registry.yarnpkg.com/ionic/-/ionic-3.13.1.tgz#c282e272b1a5da3e8592844105ee2ec9d9bff489"
+ionic@3.19.0:
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/ionic/-/ionic-3.19.0.tgz#e16a3389737292d7f751c50903009863fe3d181a"
   dependencies:
-    "@ionic/cli-utils" "1.13.1"
-    "@ionic/discover" "^0.3.3"
-    chalk "^2.0.0"
+    "@ionic/cli-framework" "0.1.2"
+    "@ionic/cli-utils" "1.19.0"
+    chalk "^2.3.0"
     opn "^5.1.0"
-    os-name "^2.0.1"
-    rimraf "^2.6.2"
     semver "^5.3.0"
     tslib "^1.8.0"
 
@@ -2042,6 +2030,10 @@ is-extglob@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/is-extglob/download/is-extglob-1.0.0.tgz#ac468177c4943405a092fc8f29760c6ffc6206c0"
 
+is-extglob@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/is-extglob/-/is-extglob-2.1.1.tgz#a88c02535791f02ed37c76a1b9ea9773c833f8c2"
+
 is-finite@^1.0.0:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/is-finite/download/is-finite-1.0.2.tgz#cc6677695602be550ef11e8b4aa6305342b6d0aa"
@@ -2063,6 +2055,12 @@ is-glob@^2.0.0, is-glob@^2.0.1:
   resolved "http://registry.npm.taobao.org/is-glob/download/is-glob-2.0.1.tgz#d096f926a3ded5600f3fdfd91198cb0888c2d863"
   dependencies:
     is-extglob "^1.0.0"
+
+is-glob@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/is-glob/-/is-glob-3.1.0.tgz#7ba5ae24217804ac70707b96922567486cc3e84a"
+  dependencies:
+    is-extglob "^2.1.0"
 
 is-module@^1.0.0:
   version "1.0.0"
@@ -2380,7 +2378,7 @@ lodash@^3.5.0:
   version "3.10.1"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.8.0, lodash@~4.17.4:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.8.0, lodash@~4.17.4:
   version "4.17.4"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -2528,15 +2526,23 @@ minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/minimist/download/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
+minipass@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-2.2.1.tgz#5ada97538b1027b4cf7213432428578cb564011f"
+  dependencies:
+    yallist "^3.0.0"
+
+minizlib@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/minizlib/-/minizlib-1.1.0.tgz#11e13658ce46bc3a70a267aac58359d1e0c29ceb"
+  dependencies:
+    minipass "^2.2.1"
+
 "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   version "0.5.1"
   resolved "http://registry.npm.taobao.org/mkdirp/download/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
-
-moment@^2.18.1:
-  version "2.18.1"
-  resolved "http://registry.npm.taobao.org/moment/download/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
 ms@2.0.0:
   version "2.0.0"
@@ -2747,6 +2753,10 @@ onetime@^2.0.0:
   resolved "http://registry.npm.taobao.org/onetime/download/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
   dependencies:
     mimic-fn "^1.0.0"
+
+open@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
 
 opn@^5.1.0:
   version "5.1.0"
@@ -3241,6 +3251,10 @@ require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/require-main-filename/download/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
 
+requires-port@1.x.x:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
+
 resolve@1.1.7:
   version "1.1.7"
   resolved "http://registry.npm.taobao.org/resolve/download/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
@@ -3333,11 +3347,11 @@ rx-lite@*, rx-lite@^4.0.8:
   version "4.0.8"
   resolved "http://registry.npm.taobao.org/rx-lite/download/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
 
-rxjs@5.5.2:
-  version "5.5.2"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.2.tgz#28d403f0071121967f18ad665563255d54236ac3"
+rxjs@5.5.6:
+  version "5.5.6"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.6.tgz#e31fb96d6fd2ff1fd84bcea8ae9c02d007179c02"
   dependencies:
-    symbol-observable "^1.0.1"
+    symbol-observable "1.0.1"
 
 safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
@@ -3458,10 +3472,6 @@ shelljs@^0.2.6:
 shelljs@^0.5.3:
   version "0.5.3"
   resolved "http://registry.npm.taobao.org/shelljs/download/shelljs-0.5.3.tgz#c54982b996c76ef0c1e6b59fbdc5825f5b713113"
-
-shelljs@^0.6.0:
-  version "0.6.1"
-  resolved "http://registry.npm.taobao.org/shelljs/download/shelljs-0.6.1.tgz#ec6211bed1920442088fe0f70b2837232ed2c8a8"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
@@ -3662,9 +3672,9 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "http://registry.npm.taobao.org/strip-json-comments/download/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-superagent@^3.5.2, superagent@^3.6.3:
-  version "3.6.3"
-  resolved "http://registry.npm.taobao.org/superagent/download/superagent-3.6.3.tgz#eb95fcb576a9d23a730a9d0789731b5379a36cdc"
+superagent@^3.8.0:
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/superagent/-/superagent-3.8.2.tgz#e4a11b9d047f7d3efeb3bbe536d9ec0021d16403"
   dependencies:
     component-emitter "^1.2.0"
     cookiejar "^2.1.0"
@@ -3694,9 +3704,9 @@ sw-toolbox@3.6.0:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
 
-symbol-observable@^1.0.1:
-  version "1.0.4"
-  resolved "http://registry.npm.taobao.org/symbol-observable/download/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
+symbol-observable@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
 
 tail@^0.4.0:
   version "0.4.0"
@@ -3735,6 +3745,17 @@ tar@^2.0.0, tar@^2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
+
+tar@^4.0.2:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-4.2.0.tgz#7e2bdadf55a4a04bf64a9d2680b4455e7c61d45e"
+  dependencies:
+    chownr "^1.0.1"
+    fs-minipass "^1.2.3"
+    minipass "^2.2.1"
+    minizlib "^1.1.0"
+    mkdirp "^0.5.0"
+    yallist "^3.0.2"
 
 through2@^0.6.2, through2@^0.6.5:
   version "0.6.5"
@@ -3784,9 +3805,9 @@ trim-newlines@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/trim-newlines/download/trim-newlines-1.0.0.tgz#5887966bb582a4503a41eb524f7d35011815a613"
 
-tsickle@^0.24.0:
-  version "0.24.1"
-  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.24.1.tgz#039343b205bf517a333b0703978892f80a7d848e"
+tsickle@^0.25.5:
+  version "0.25.6"
+  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.25.6.tgz#b595db16b236721824eeeda8bb262365b47ef334"
   dependencies:
     minimist "^1.2.0"
     mkdirp "^0.5.1"
@@ -3856,17 +3877,13 @@ type-is@~1.6.15:
     media-typer "0.3.0"
     mime-types "~2.1.15"
 
-typescript@2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.2.tgz#f8395f85d459276067c988aa41837a8f82870844"
-
-typescript@^2.3.3:
+typescript@2.6.2, typescript@~2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.2.tgz#3c5b6fd7f6de0914269027f03c0946758f7673a4"
 
-uglify-es@^3.1.6:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.2.0.tgz#fbbfb9dc465ec7e5065701b9720d0de977d0bc24"
+uglify-es@3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.2.2.tgz#15c62b7775002c81b7987a1c49ecd3f126cace73"
   dependencies:
     commander "~2.12.1"
     source-map "~0.6.1"
@@ -3982,10 +3999,6 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-walkdir@^0.0.11:
-  version "0.0.11"
-  resolved "http://registry.npm.taobao.org/walkdir/download/walkdir-0.0.11.tgz#a16d025eb931bd03b52f308caed0f40fcebe9532"
-
 watchpack@^1.4.0:
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/watchpack/download/watchpack-1.4.0.tgz#4a1472bcbb952bd0a9bb4036801f954dfb39faac"
@@ -4001,9 +4014,9 @@ webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.5.3"
 
-webpack@^3.8.1:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.9.0.tgz#7d65ca4ba92ae1b67be2c00b217fb990b8ffa97f"
+webpack@3.8.1:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.8.1.tgz#b16968a81100abe61608b0153c9159ef8bb2bd83"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
@@ -4091,6 +4104,14 @@ wrappy@1:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/wrappy/download/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
+ws@3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-3.3.2.tgz#96c1d08b3fefda1d5c1e33700d3bfaa9be2d5608"
+  dependencies:
+    async-limiter "~1.0.0"
+    safe-buffer "~5.1.0"
+    ultron "~1.1.0"
+
 ws@^3.2.0:
   version "3.2.0"
   resolved "http://registry.npm.taobao.org/ws/download/ws-3.2.0.tgz#d5d3d6b11aff71e73f808f40cc69d52bb6d4a185"
@@ -4147,6 +4168,10 @@ y18n@^3.2.1:
 yallist@^2.1.2:
   version "2.1.2"
   resolved "http://registry.npm.taobao.org/yallist/download/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
+
+yallist@^3.0.0, yallist@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.2.tgz#8452b4bb7e83c7c188d8041c1a837c773d6d8bb9"
 
 yargs-parser@^5.0.0:
   version "5.0.0"
@@ -4214,6 +4239,6 @@ zip-stream@^1.2.0:
     lodash "^4.8.0"
     readable-stream "^2.0.0"
 
-zone.js@0.8.18:
-  version "0.8.18"
-  resolved "http://registry.npm.taobao.org/zone.js/download/zone.js-0.8.18.tgz#8cecb3977fcd1b3090562ff4570e2847e752b48d"
+zone.js@0.8.19:
+  version "0.8.19"
+  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.19.tgz#a4b522cd9e8b7b616a638c297d720d4c7f292f71"

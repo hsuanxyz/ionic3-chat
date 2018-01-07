@@ -40,9 +40,9 @@
         "zone.js": "0.8.19"
     },
     "devDependencies": {
+        "@ionic/app-scripts": "3.1.7",
         "cross-spawn": "^5.1.0",
         "ionic": "3.19.0",
-        "@ionic/app-scripts": "3.1.7",
         "typescript": "2.6.2"
     },
     "cordovaPlugins": [

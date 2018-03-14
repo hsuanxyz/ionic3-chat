@@ -12,3 +12,6 @@ env:
 
 before_script:
   - npm install -g @angular/cli
+
+script:
+  - npm run $TASK

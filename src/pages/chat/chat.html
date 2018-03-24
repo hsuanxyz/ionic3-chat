@@ -38,10 +38,10 @@
       <ion-icon name="md-happy"></ion-icon>
     </button>
     <textarea #chat_input
-                  placeholder="Text Input"
-                  [(ngModel)]="editorMsg"
-                  (keyup.enter)="sendMsg()"
-                  (focusin)="onFocus()">
+              placeholder="Text Input"
+              [(ngModel)]="editorMsg"
+              (keyup.enter)="sendMsg()"
+              (focusin)="onFocus()">
     </textarea>
     <button ion-button clear icon-only item-right (click)="sendMsg()">
       <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>

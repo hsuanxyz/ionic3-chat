@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavParams } from 'ionic-angular';
-import { Events, Content, TextInput } from 'ionic-angular';
+import { Events, Content } from 'ionic-angular';
 import { ChatService, ChatMessage, UserInfo } from "../../providers/chat-service";
 
 @IonicPage()
@@ -58,6 +58,8 @@ export class Chat {
     this.showEmojiPicker = !this.showEmojiPicker;
     if (!this.showEmojiPicker) {
       this.focus();
+    } else {
+      this.setTextareaScroll();
     }
     this.content.resize();
     this.scrollToBottom();
@@ -144,5 +146,10 @@ export class Chat {
     if (this.messageInput && this.messageInput.nativeElement) {
       this.messageInput.nativeElement.focus();
     }
+  }
+
+  private setTextareaScroll() {
+    const textarea =this.messageInput.nativeElement;
+    textarea.scrollTop = textarea.scrollHeight;
   }
 }

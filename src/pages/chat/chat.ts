@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavParams } from 'ionic-angular';
 import { Events, Content, TextInput } from 'ionic-angular';
 import { ChatService, ChatMessage, UserInfo } from "../../providers/chat-service";
@@ -11,7 +11,7 @@ import { ChatService, ChatMessage, UserInfo } from "../../providers/chat-service
 export class Chat {
 
   @ViewChild(Content) content: Content;
-  @ViewChild('chat_input') messageInput: TextInput;
+  @ViewChild('chat_input') messageInput: ElementRef;
   msgList: ChatMessage[] = [];
   user: UserInfo;
   toUser: UserInfo;
@@ -57,7 +57,7 @@ export class Chat {
   switchEmojiPicker() {
     this.showEmojiPicker = !this.showEmojiPicker;
     if (!this.showEmojiPicker) {
-      this.messageInput.setFocus();
+      this.focus();
     }
     this.content.resize();
     this.scrollToBottom();
@@ -67,7 +67,7 @@ export class Chat {
    * @name getMsg
    * @returns {Promise<ChatMessage[]>}
    */
-  private getMsg() {
+  getMsg() {
     // Get mock message list
     return this.chatService
     .getMsgList()
@@ -100,7 +100,7 @@ export class Chat {
     this.editorMsg = '';
 
     if (!this.showEmojiPicker) {
-      this.messageInput.setFocus();
+      this.focus();
     }
 
     this.chatService.sendMsg(newMsg)
@@ -138,5 +138,11 @@ export class Chat {
         this.content.scrollToBottom();
       }
     }, 400)
+  }
+
+  private focus() {
+    if (this.messageInput && this.messageInput.nativeElement) {
+      this.messageInput.nativeElement.focus();
+    }
   }
 }

@@ -33,27 +33,19 @@
 </ion-content>
 
 <ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'">
-  <ion-grid class="input-wrap">
-    <ion-row>
-      <ion-col col-2>
-        <button ion-button clear icon-only item-right (click)="switchEmojiPicker()">
-          <ion-icon name="md-happy"></ion-icon>
-        </button>
-      </ion-col>
-      <ion-col col-8>
-        <ion-textarea #chat_input
-                      placeholder="Text Input"
-                      [(ngModel)]="editorMsg"
-                      (keyup.enter)="sendMsg()"
-                      (ionFocus)="onFocus()">
-        </ion-textarea>
-      </ion-col>
-      <ion-col col-2>
-        <button ion-button clear icon-only item-right (click)="sendMsg()">
-          <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="input-wrap">
+    <button ion-button clear icon-only item-right (click)="switchEmojiPicker()">
+      <ion-icon name="md-happy"></ion-icon>
+    </button>
+    <textarea #chat_input
+                  placeholder="Text Input"
+                  [(ngModel)]="editorMsg"
+                  (keyup.enter)="sendMsg()"
+                  (focusin)="onFocus()">
+    </textarea>
+    <button ion-button clear icon-only item-right (click)="sendMsg()">
+      <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
+    </button>
+  </div>
   <emoji-picker *ngIf="showEmojiPicker" [(ngModel)]="editorMsg"></emoji-picker>
 </ion-footer>

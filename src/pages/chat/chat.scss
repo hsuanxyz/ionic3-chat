@@ -18,21 +18,11 @@ page-chat {
   }
 
   .input-wrap {
-    padding: 0 5px;
-    ion-textarea {
-      position: static;
-
-    }
-    ion-col.col {
-      padding: 0;
-    }
-    button {
-      width: 100%;
-      height: 55px;
-      font-size: 1.3em;
-      margin: 0;
-    }
+    padding: 5px;
+    display: flex;
     textarea {
+      flex: 1;
+      border: 0;
       border-bottom: 1px $userBackgroundColor;
       border-style: solid;
     }
